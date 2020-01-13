@@ -1,0 +1,7 @@
+# this is a comment
+drop *
+keep Muon*
+keep Photon*
+#keep Electron*
+#keep Jet*
+keep HLT*
