@@ -129,7 +129,7 @@ class PostProcessor :
 	    nEntries = min(inTree.GetEntries() - self.firstEntry, self.maxEntries)
 	    totEntriesRead+=nEntries
 	    # pre-skimming
-	    elist,jsonFilter = preSkim(inTree, self.json, self.cut, maxEntries = self.maxEntries, firstEntry = self.firstEntry)
+	    elist,jsonFilter,genSumw = preSkim(inTree, self.json, self.cut, maxEntries = self.maxEntries, firstEntry = self.firstEntry)
 	    if self.justcount:
 		print 'Would select %d / %d entries from %s (%.2f%%)'%(elist.GetN() if elist else nEntries, nEntries, fname, (elist.GetN() if elist else nEntries)/(0.01*nEntries) if nEntries else 0)
 		if self.prefetch:
@@ -174,6 +174,7 @@ class PostProcessor :
                         maxEntries=self.maxEntries, 
                         firstEntry=self.firstEntry,
                         jsonFilter=jsonFilter,
+                        genwt = genSumw,
                         provenance=self.provenance)
             else : 
                 outFile = None
