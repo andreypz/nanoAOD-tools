@@ -1,4 +1,6 @@
 # this is a comment
 drop *
-keep Muon*
-keep Photon*
+#keep Muon*
+#keep Photon*
+#keep HLT*
+keep a_*

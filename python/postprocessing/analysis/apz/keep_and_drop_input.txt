@@ -3,5 +3,5 @@ drop *
 keep Muon*
 keep Photon*
 #keep Electron*
-#keep Jet*
+keep Jet*
 keep HLT*
